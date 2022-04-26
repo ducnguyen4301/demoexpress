@@ -1,11 +1,13 @@
 import { Request, Response } from "express";
+require('dotenv').config();
+require('./db');
 const express = require("express");
-
 const app = express();
+const PORT = process.env.PORT;
+const userRouter = require('./routers/user');
 
-app.listen(8000, () => {
-  console.log("is running");
-});
-app.get("/", (req: Request, res: Response) => {
-  return res.send('hello express');
+app.use('/api/user', userRouter)
+
+app.listen(PORT, () => {
+  console.log("port is running "+ PORT);
 });
