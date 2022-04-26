@@ -1,19 +1,24 @@
 # node-express-typescript-starter
 Starting template for Node Express API with Typescript 
 # Create folder
+```
 mkdir express-demo && npm init
+```
 
 Install dependencies using npm
 ```
 npm install
+```
 ```
 npm install typescript --save-dev
 npm install ts-node-dev --save-dev
 npm install express 
 npm install @types/express --save-dev
 npm install @types/node --save-dev
-
+```
+```
 npx tsc --init
+```
 
 # Modify the scripts in package.json
 "scripts": {
